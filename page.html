@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ice Cream</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <form>
+    <h1 class="topic">Welcome to the safest ice cream web</h1>
+    <div>
+        <img src="imgs/brown.png"  alt="choclate ice cream">
+        <img src="imgs/yellow.png" alt="lemon ice cream">
+        <img src="imgs/pink.png"   alt="strawberry ice cream">
+        <img src="imgs/white.png"  alt="vanilla ice cream">
+    </div>
+    <div>
+      <select name="ice-cream-type" required>
+        <option value=''></option>
+        <option value="chocolate">Chocolate</option>
+        <option value="lemon">Lemon</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="vanilla">Vanilla</option>
+      </select>
+    </div>
+    <div name="amount">
+      <label>
+        Ice Cream amount (kg)
+        <input name="amount" type="range" id="range_kg" step="0.5" value="1" min="1" max="5" 
+        oninput="rangenumber.value=value" required/>
+        <input type="number" id="rangenumber" step="0.5" value="1" min="1" max="5"
+        oninput="range_kg.value=value" required>
+      </label>
+    </div>
+    <div name="extras-ontop">
+      <label>
+        Strawberry syrup
+        <input name="strawberry-syrup" type="checkbox">
+      </label>
+      <label>
+        Chocolate syrup
+        <input name="chocolate-syrup" type="checkbox">
+      </label>
+      <label>
+        Candies
+        <input name="candies" type="checkbox">
+      </label>
+      <label>
+        Candied pecans
+        <input name="candied-pecans" type="checkbox">
+      </label>
+    </div>
+    <div>
+      <input type="submit" value="Purchase">
+    </div>
+  </form>
+</body>
+</html>
